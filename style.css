@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --trans-white-para: hsl(0, 0%, 100%, 0.75);
+    --bg-hd-bt: hsl(0, 0%, 95%);
+}
+body{
+    font-size: 15px;
+    height: 100vh;
+    font-family: 'Big Shoulders Display', sans-serif;
+    background-color: var(--bg-hd-bt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main{
+    max-width:750px;
+    margin: 0 auto;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 2rem;
+}
+.box{
+    padding: 2rem;
+}
+.box-1 {
+    background-color: var(--bright-orange);
+}
+.box-2{
+    background-color: var(--dark-cyan);
+}
+.box-3{
+    background-color: var(--very-dark-cyan);
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.title{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--bg-hd-bt);
+    text-transform: uppercase;
+    padding: 1.5rem 0 1rem 0;
+}
+.box p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--trans-white-para);
+    padding: 0 0 3.5rem 0;
+    margin-bottom: 10px;
+}
+
+.box button{
+    border: 2px solid var(--bg-hd-bt);
+    background:var(--bg-hd-bt);
+    border-radius: 30px;
+    padding: .5rem 2rem .5rem 2rem;
+}
+.box-1 button{
+    color: var(--bright-orange);
+}
+.box-2 button{
+    color: var(--dark-cyan);
+}
+.box-3 button{
+    color: var(--very-dark-cyan);
+}
+button:hover{
+    background-color: transparent;
+    color: var(--bg-hd-bt);
+}
+
+@media only screen and (max-width: 680px){
+    body{
+        margin: 250px 0;
+    }
+    .container{
+        /* margin: 2rem; */
+       grid-template-columns: 1fr;
+    }
+    .box{
+        padding: 2rem;
+    }
+    .box p{
+        padding: 0 0 1rem 0;
+    }
+}
